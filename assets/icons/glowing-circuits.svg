@@ -1,0 +1,20 @@
+<svg width="800" height="120" viewBox="0 0 800 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="cGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="120" fill="none"/>
+  <path d="M0,60 L120,60 L150,30 L260,30 L290,60 L500,60 L530,90 L650,90 L680,60 L800,60"
+        fill="none" stroke="#00f0ff" stroke-width="2" filter="url(#cGlow)">
+    <animate attributeName="stroke-dashoffset" from="0" to="-1000" dur="8s" repeatCount="indefinite"/>
+    <animate attributeName="stroke-dasharray" values="10,20" dur="0.1s" repeatCount="indefinite"/>
+  </path>
+  <g fill="#8a5cff" filter="url(#cGlow)">
+    <circle cx="150" cy="30" r="4"/>
+    <circle cx="290" cy="60" r="4"/>
+    <circle cx="530" cy="90" r="4"/>
+    <circle cx="680" cy="60" r="4"/>
+  </g>
+</svg>

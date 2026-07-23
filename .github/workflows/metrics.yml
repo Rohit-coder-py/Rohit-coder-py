@@ -1,0 +1,29 @@
+# Refreshes a live metrics panel (activity graph, languages, stats) as an SVG
+# under images/metrics.svg using lowlighter/metrics (https://github.com/lowlighter/metrics),
+# then commits it back to the repo so README.md always shows fresh data.
+
+name: Update Profile Metrics
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"  # every 12 hours
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          filename: images/metrics.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: ${{ github.repository_owner }}
+          template: classic
+          base: header, activity, community, repositories, metadata
+          plugin_languages: yes
+          plugin_languages_analysis_timeout: 15
+          plugin_languages_limit: 8
+          config_timezone: Asia/Kolkata

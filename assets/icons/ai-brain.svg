@@ -1,0 +1,36 @@
+<svg width="300" height="260" viewBox="0 0 300 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="brainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="100%" stop-color="#8a5cff"/>
+    </linearGradient>
+    <filter id="bGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="300" height="260" fill="none"/>
+  <path d="M150,30
+           C100,30 70,60 70,95
+           C50,100 40,120 45,140
+           C35,150 35,175 55,185
+           C55,205 75,220 95,215
+           C105,230 130,235 145,220
+           C160,235 185,230 195,215
+           C215,220 235,205 235,185
+           C255,175 255,150 245,140
+           C250,120 240,100 220,95
+           C220,60 190,30 150,30 Z"
+        fill="none" stroke="url(#brainGrad)" stroke-width="2.5" filter="url(#bGlow)"/>
+  <path d="M150,45 L150,215 M110,60 C120,90 120,120 100,140 C120,150 120,180 105,200
+           M190,60 C180,90 180,120 200,140 C180,150 180,180 195,200"
+        fill="none" stroke="url(#brainGrad)" stroke-width="1.5" opacity="0.7"/>
+  <g fill="#00f0ff">
+    <circle cx="150" cy="45" r="3"/>
+    <circle cx="100" cy="140" r="3"/>
+    <circle cx="200" cy="140" r="3"/>
+    <circle cx="105" cy="200" r="3"/>
+    <circle cx="195" cy="200" r="3"/>
+    <circle cx="150" cy="215" r="3"/>
+  </g>
+</svg>

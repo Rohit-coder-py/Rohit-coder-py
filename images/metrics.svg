@@ -1,0 +1,7 @@
+<svg width="800" height="120" viewBox="0 0 800 120" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="120" rx="10" fill="#0d0221" stroke="#3a4a8a"/>
+  <text x="400" y="55" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="18"
+        text-anchor="middle" fill="#00f0ff">Metrics will appear here automatically</text>
+  <text x="400" y="80" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13"
+        text-anchor="middle" fill="#9fb3ff">after the "Update Profile Metrics" GitHub Action runs once on main</text>
+</svg>
